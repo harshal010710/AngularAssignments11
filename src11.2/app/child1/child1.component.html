@@ -1,0 +1,17 @@
+<input #ip type="text" placeholder="Enter Number">
+<button (click)="GetValue(ip.value)" >Submit</button>
+
+<br>
+<br>
+
+<div *ngIf="RtnCond(); then thenTemplateName else elseTemplateName">
+    Here is never showing
+</div>
+
+<ng-template #thenTemplateName>
+     {{val}} is prime
+</ng-template>
+
+<ng-template #elseTemplateName>
+     {{val}} is non-prime
+</ng-template>
